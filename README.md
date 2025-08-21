@@ -8,7 +8,7 @@ A comprehensive personal project demonstrating a complete, end-to-end CI/CD pipe
 
 This project implements an event-driven automation workflow. A `git push` to the `master` branch on GitLab triggers a multi-stage CI/CD pipeline that handles the entire build, release, and deployment process without any manual intervention.
 
-![Devops-project-workflow](./assets/screenshot.png)
+![Devops-project-workflow](./fig/devops-project.png)
 
 ## ✨ Key Features
 
