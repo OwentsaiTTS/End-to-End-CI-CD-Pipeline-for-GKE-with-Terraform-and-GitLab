@@ -4,13 +4,13 @@ A comprehensive personal project demonstrating a complete, end-to-end CI/CD pipe
 
 ---
 
-## 🏛️ Architecture & Workflow
+## Architecture & Workflow
 
 This project implements an event-driven automation workflow. A `git push` to the `master` branch on GitLab triggers a multi-stage CI/CD pipeline that handles the entire build, release, and deployment process without any manual intervention.
 
 ![Devops-project-workflow](./fig/devops-project.png)
 
-## ✨ Key Features
+## Key Features
 
 * **Infrastructure as Code (IaC):** All cloud infrastructure (GKE Cluster, Node Pools, etc.) is defined declaratively using **Terraform**. This enables version-controlled, repeatable, and automated provisioning.
 * **Automated Docker Builds:** Upon every commit, the CI/CD pipeline automatically builds the Python Flask application into a **Docker** image, tags it with the unique commit SHA for traceability, and pushes it to a private **GitLab Container Registry**.
@@ -18,7 +18,7 @@ This project implements an event-driven automation workflow. A `git push` to the
 * **Secure Credential Management:** All sensitive credentials, such as the GCP Service Account Key and the GitLab Deploy Token, are securely stored as **GitLab CI/CD variables** and are never hardcoded in the repository.
 * **Remote State Management:** Terraform's state is securely managed in a **Google Cloud Storage (GCS)** bucket with versioning enabled, allowing for team collaboration and preventing state corruption.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Technology | Purpose |
 | :--- | :--- |
@@ -30,7 +30,7 @@ This project implements an event-driven automation workflow. A `git push` to the
 | **Kubernetes** | Core container orchestration and application management. |
 | **Python & Flask** | The web application framework. |
 
-## 📖 Lessons Learned
+## Lessons Learned
 
 This project was a deep dive into real-world troubleshooting. The key challenges and learnings included:
 * **Cloud IAM & Scopes:** Navigating the complexities of GCP's permission model, understanding the critical difference between IAM Roles and OAuth Scopes, and correctly configuring Service Accounts (`Editor`, `Service Account User` roles) were the most challenging aspects.
